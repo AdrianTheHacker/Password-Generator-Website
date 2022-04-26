@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Password Generator</title>
+        <link href="..\Styles\main.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1>Password Generator</h1>
+
+        <div class="midsize" id="instructions">
+            <h3>Instructions</h3>
+            <ol>
+                <li>Type in the passwords conditions</li>
+                <li>Click the red button title Generate</li>
+                <li>Copy the password and use where ever!</li>
+            </ol>
+        </div>
+        <div class="midsize" id="output">
+            <h3>Password</h3>
+            <p1 id="password">New Password</p1><br>
+            <button onclick="copy()">Copy</button>
+        </div>
+        <div id="conditions">
+            <h3>Conditions</h3>
+            <div class="conditions">
+                <menu>
+                    <li>
+                        <label for="length">Length of Password</label>
+                        <input type="number" id="length" value="10"></input>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="eng_alpha" checked>
+                        <label for="eng_alpha">English Alphabet</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="caps">
+                        <label for="caps">Capital Letters</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="numbers">
+                        <label for="numbers">Numbers</label>
+                    </li>
+                    <button>Submit</button>
+                </menu>
+            </div>
+        </div>
+    </body>
+</html>
