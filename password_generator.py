@@ -1,4 +1,4 @@
-from random import randint, choice
+from secrets import randbelow, choice
 from string import ascii_uppercase, ascii_lowercase
 
 
@@ -32,15 +32,14 @@ def create_password(length, options):
     for character in range(length):
         char_type = choice(options)
 
-        match char_type:
-            case "l":
-                password += choice(ascii_lowercase)
+        if char_type == "l":
+            password += choice(ascii_lowercase)
 
-            case "u":
-                password += choice(ascii_uppercase)
+        if char_type == "u":
+            password += choice(ascii_uppercase)
 
-            case "n":
-                password += str(randint(0, 9))
+        if char_type == "n":
+            password += str(randbelow(9))
 
     return password
 
