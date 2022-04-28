@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Password Generator</title>
-        <link href="..\Styles\main.css" rel="stylesheet">
+        <link href="{{ url_for('static', filename='Styles/main.css') }}" rel="stylesheet">
     </head>
 
     <body>
@@ -46,6 +46,6 @@
                 </menu>
             </div>
         </div>
-        <script src="..\Scripts\submit.js"></script>
+        <script src="{{ url_for('static', filename='Scripts/submit.js') }}"></script>
     </body>
 </html>
