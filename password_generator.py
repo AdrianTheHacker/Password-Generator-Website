@@ -30,20 +30,18 @@ def create_password(length, options):
     password = ""
 
     for character in range(length):
-        char_type = choice(options)
+        char_index = randbelow(len(options))
+        
+        while not options[char_index]:
+            char_index = randbelow(len(options))
 
-        if char_type == "l":
+        if char_index == 0:
             password += choice(ascii_lowercase)
 
-        if char_type == "u":
+        if char_index == 1:
             password += choice(ascii_uppercase)
 
-        if char_type == "n":
+        if char_index == 2:
             password += str(randbelow(9))
 
     return password
-
-
-print(create_password(9, get_options(True, False, False)))
-print(create_password(17, get_options(False, False, True)))
-print(create_password(10, get_options(False, True, False)))

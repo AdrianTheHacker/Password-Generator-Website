@@ -19,33 +19,32 @@
         </div>
         <div class="midsize" id="output">
             <h3>Password</h3>
-            <p1 id="password">New Password</p1><br>
+            <p1 id="password">New Password: {{ password }}</p1><br>
             <button id="copy">Copy</button>
         </div>
         <div id="conditions">
             <h3>Conditions</h3>
             <div class="conditions">
-                <menu>
+                <form action="" method="POST">
                     <li>
                         <label for="length">Length of Password</label>
-                        <input type="number" id="length" value="10"></input>
+                        <input type="number" name="length" value="10"></input>
                     </li>
                     <li>
-                        <input type="checkbox" id="eng_alpha" checked>
+                        <input type="checkbox" name="eng_alpha" checked>
                         <label for="eng_alpha">English Alphabet</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="caps">
+                        <input type="checkbox" name="caps">
                         <label for="caps">Capital Letters</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="numbers">
+                        <input type="checkbox" name="numbers">
                         <label for="numbers">Numbers</label>
                     </li>
-                    <button id="submit">Submit</button>
-                </menu>
+                    <input type="submit" id="submit" value="Generate">
+                </form>
             </div>
         </div>
-        <script src="{{ url_for('static', filename='Scripts/submit.js') }}"></script>
     </body>
 </html>
