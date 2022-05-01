@@ -23,6 +23,9 @@ def get_password():
             options.append(False)
 
     print(options)
+    if options == [False, False, False]:
+        options = [True, False, False]
+        
     return render_template('index.html', password=create_password(int(request.form['length']), options))
 
 
