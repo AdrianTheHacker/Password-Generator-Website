@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Password Generator Website</title>
+</head>
+
+<body>
+    <div class="contentContainer">
+        <h1 id="password">Password</h1>
+        <div class="controlsContainer">
+            <form id="controlsForm">
+                <label for="lengthControl">Password Length</label>
+                <input name="lengthControl" id="lengthControl" type="range" min="1" max="18" step="1" value="7"
+                    oninput="lengthControlOutput.value = value">
+                <output id="lengthControlOutput">7</output>
+
+                <label for="specialCharactersControl">Special Characters</label>
+                <input name="specialCharactersControl" id="specialCharactersControl" type="checkbox">
+
+                <label for="numbersControl">Numbers</label>
+                <input name="numbersControl" id="numbersControl" type="checkbox">
+
+                <input type="submit" value="Create">
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+
+</html>
