@@ -1,6 +1,6 @@
 function getValidCharacters(specialCharactersAllowed, numbersAllowed) {
     const alphabet = "abcdefghijklmnopqrstuvwxyz";
-    const specialCharacters = "`~!@#$%^&*()-_=+[{]};:'<,>.?/".concat('"');
+    const specialCharacters = "!@$%^&*-_=+;:,.?/";
     const numbers = "1234567890";
 
     // console.log(alphabet);
@@ -8,12 +8,9 @@ function getValidCharacters(specialCharactersAllowed, numbersAllowed) {
     // console.log(numbers);
 
     let validCharacters = alphabet;
-    if (specialCharactersAllowed === true) {
-        console.log("..."); validCharacters.concat(specialCharacters);
-    }
-    if (numbersAllowed === true) { validCharacters.concat(numbers); }
+    if (specialCharactersAllowed) { validCharacters += specialCharacters; }
+    if (numbersAllowed) { validCharacters += numbers; }
 
-    console.log(validCharacters);
     return validCharacters;
 }
 
@@ -29,6 +26,7 @@ function createRandomCharacterSequence(length, characters) {
         charactersSequence += characters.at(randomIndex);
     }
 
+    console.log(charactersSequence);
     return charactersSequence;
 }
 
