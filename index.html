@@ -9,25 +9,30 @@
 <body>
     <div class="contentContainer">
         <h1 id="password">Password</h1>
-        <div class="controlsContainer">
-            <form id="controlsForm">
-                <label for="lengthControl">Password Length</label>
-                <input name="lengthControl" id="lengthControl" type="range" min="1" max="18" step="1" value="7"
-                    oninput="lengthControlOutput.value = value">
-                <output id="lengthControlOutput">7</output>
+        <form class="controlsContainer" id="controlsForm">
+            <label class="big-label" for="lengthControl">Length</label><br>
+            <input class="lengthControl" name="lengthControl" id="lengthControl" type="range" min="1" max="18" step="1" value="7"
+                oninput="lengthControlOutput.value = value">
+            <output id="lengthControlOutput">7</output>
 
-                <label for="specialCharactersControl">Special Characters</label>
-                <input name="specialCharactersControl" id="specialCharactersControl" type="checkbox">
+            <div class="buttonsContainer">
+                <div class="checkboxContainer">
+                    <label class="small-label" for="specialCharactersControl">Special Characters</label>
+                    <input class="checkbox" name="specialCharactersControl" id="specialCharactersControl" type="checkbox">
+                </div>
 
-                <label for="numbersControl">Numbers</label>
-                <input name="numbersControl" id="numbersControl" type="checkbox">
+                <div class="checkboxContainer">
+                    <label class="small-label" for="numbersControl">Numerical Characters</label>
+                    <input class="checkbox" name="numbersControl" id="numbersControl" type="checkbox">
+                </div>
 
-                <input type="submit" value="Create">
-            </form>
-            <button id="copyButton">Copy Password</button>
-        </div>
+                <input class="controlButton" type="submit" value="Create">
+                <input class="controlButton" type="button" id="copyButton" value="Copy Password">
+            </div>
+        </form>
     </div>
 
+    <link rel="stylesheet" href="styles/main.css">
     <script type="text/javascript" src="scripts/newPassword.js"></script>
     <script type="text/javascript" src="scripts/copyText.js"></script>
 </body>

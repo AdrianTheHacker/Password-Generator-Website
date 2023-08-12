@@ -1,0 +1,92 @@
+/* Positioning, Display and Box Model, color, text, other */
+/* https://9elements.com/css-rule-order/ */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto+Slab:wght@600&display=swap');
+
+:root {
+    --background-color: #435966;
+    --primary-box-color: #09202B;
+    --secondary-box-color: #F6F6F6;
+    --text-color: #E8E8E8;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.contentContainer {
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 55px;
+}
+
+.controlsContainer {
+    width: 350px;
+    height: 450px;
+    padding: 20px;
+    border-radius: 13px;
+
+    background-color: var(--primary-box-color);
+}
+
+.big-label {
+    font-size: 38px;
+    color: var(--text-color);
+}
+
+.small-label {
+    font-size: 27px;
+    color: var(--text-color);
+}
+
+.buttonsContainer {
+    width: 100%;
+    height: 80%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.controlButton {
+    align-self: end;
+    justify-self: center;
+
+    width: 90%;
+    aspect-ratio: 2/1;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    color: var(--primary-box-color);
+
+    border: none;
+    border-radius: 7px;
+}
+
+.checkboxContainer {
+    text-align: center;
+    align-self: center;
+}   
+
+.checkbox {
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+
+.lengthControl {
+    width: 80%;
+}
+
+#lengthControlOutput {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    color: var(--text-color);
+}
